@@ -1,0 +1,117 @@
+-Wyvern-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[FEATURES]--
+
+-Windows
+-Tabs
+-Section Labels
+-Text Labels
+-Buttons
+-Sliders
+-Toggles
+-Boxes 3x varients
+-Sliders
+-CutOffs
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[STEP 1]--
+First off we need to define the UI Lib, this is needed to actually create tabs, if not done correctly then no ui library function will work.
+Example: 
+
+local uilib = loadstring(game:HttpGet("https://raw.githubusercontent.com/loruph/Wyvern/main/UI%20Library"))() --local uilib = uilib name can be changed to anything
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[DEFINING]--
+
+Once you have defined the UI Library via loadstring, you can start adding components.
+For example i'll add a button:
+
+local uilib = loadstring(game:HttpGet("https://raw.githubusercontent.com/loruph/Wyvern/main/UI%20Library"))()
+local window = uilib:CreateWindow("Window Title","Game / Script Title",0.04) --0.04 is used for the drag speed, the lower the faster.
+local page1 = window:CreateTab("Page Title")
+local button1 = page1:CreateButton("Button Title", function()
+  print("This is a button!") --Your code here
+end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING SECTION LABELS]--
+
+Creating section labels are the exact same as text labels, just changing the text and the function name.
+Example:
+
+local section1 = page1:CreateSection("Section Title")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING TEXT LABELS]--
+
+Creating text labels are the exact same as section labels, just changing the text and function name.
+Example:
+
+local label1 = page1:CreateTextLabel("Label Text")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING CUTOFFS]--
+
+Creating cutoffs are the easiest out of all functions in the ui library.
+Example:
+
+local cutoff1 = page1:CreateCutOff()
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING BUTTONS]--
+Creating a button is extremely easy! all needed is a line of code with another line under with the feature you want the button to do when pressed.
+Example:
+
+local button1 = page1:CreateButton("Button Title", function() --page1 = tab you want your button on
+  print("This is a button!") --Your code here
+end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING TOGGLES]--
+Creating a toggle is almost exactly like the button function, just with another variable that shows how fast you want the script to be executed whilst toggled on.
+Example:
+
+local toggle1 = page1:CreateToggle("Toggle Title",0.2, function() -- 0.2 = speed that you want to execute at
+  print("This is printing at a speed of 0.2 miliseconds!")
+end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING TEXT BOXES]--
+Creating text boxes are a little more tricky for starters, boxes come in 3 different sizes (Short, Normal and Long). 
+Whilst creating a textbox you also need to define the textboxes text, wich we haven't done in any of the functions above.
+Example:
+
+--Default Text = PlaceHolderText (the text you see when you did not type anything on the ui)
+--Short = Box Type (As i said above, this can be used as 3 different types: Short,Normal and Long)
+local box1 = page1:CreateBox("Box Title,"Default Text","Short",function(v)
+  print(v) --Prints the text of the box when enter is pressed
+end)
+local box2 = page1:CreateBox("Box Title,"Default Text","Normal",function(z)
+  print(z) --Prints the text of the box when enter is pressed
+end)
+local box3 = page1:CreateBox("Box Title,"Default Text","Long",function(x)
+  print(x) --Prints the text of the box when enter is pressed
+end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREATING SLIDERS]--
+Creating sliders is pretty much the same as the text boxes, but replacing the default text and box type with valus instead.
+Example:
+
+--0 and 100 can be changed to what you want, these are just the minimum and max values, can be switched around if wanted.
+local slider1 = page1:CreateSlider("Slider Title",0,100,function(k)
+  print(k) --k = slider percentage
+end)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[COMING SOON]--
+
+1. Dropdowns
+2. Keybinds
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[CREDITS]--
+
+Made by loruph#1065
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
