@@ -36,7 +36,7 @@ end)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[CREATING SECTION LABELS]--
 
-Creating section labels are the exact same as text labels, just changing the text and the function name.
+Creating section labels are almost the exact same as text labels, just changing the text, a variable and the function name.
 Example:
 
 local section1 = page1:CreateSection("Section Title")
@@ -44,10 +44,10 @@ local section1 = page1:CreateSection("Section Title")
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[CREATING TEXT LABELS]--
 
-Creating text labels are the exact same as section labels, just changing the text and function name.
+Creating text labels are the exact same as section labels, just changing the text and function name. (Alignment can be changed to left, Center or Right).
 Example:
 
-local label1 = page1:CreateTextLabel("Label Text")
+local label1 = page1:CreateTextLabel("Label Text","Left")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[CREATING CUTOFFS]--
