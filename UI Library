@@ -1,4 +1,11 @@
---//Made by loruph#1065
+--//  WYVERN UI LIBRARY  \\--
+
+
+
+--//  MADE BY loruph#1065  \\--
+
+
+
 
 local Library = {}
 
@@ -322,6 +329,21 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				elseif alignment == "Right" then
 					labelText.Text = text .. "  "
 				end
+			end
+			function ComponentHandler:CreateGap(gapSize)
+				gapSize = gapSize or 0.1
+
+				local gap = Instance.new("Frame")
+
+				gap.Name = "gap"
+				gap.Parent = TabFrame
+				gap.BackgroundColor3 = Color3.fromRGB(40,40,40)
+				gap.BackgroundTransparency = 1.000
+				gap.BorderSizePixel = 0
+				gap.Position = UDim2.new(0.00797872338, 0, 0.517509699, 0)
+				gap.Size = UDim2.new(0,370,0,24)
+
+				TabFrame.CanvasSize = UDim2.new(0,0,TabFrame.CanvasSize.Y.Scale+gapSize,0)
 			end
 			function ComponentHandler:CreateSlider(SliderTitle,MinValue,MaxValue,callback)
 				_G.slidercount = _G.slidercount+1
@@ -701,7 +723,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				valTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				valTitle.Size = UDim2.new(0, 298, 0, 28)
 				valTitle.Font = Enum.Font.Code
-				valTitle.Text = " " .. BoxTitle
+				valTitle.Text = BoxTitle
 				valTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				valTitle.TextSize = 15.000
 				valTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -778,7 +800,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				userTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				userTitle.Size = UDim2.new(0, 217, 0, 28)
 				userTitle.Font = Enum.Font.Code
-				userTitle.Text = " " .. BoxTitle
+				userTitle.Text = BoxTitle
 				userTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				userTitle.TextSize = 15.000
 				userTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -856,7 +878,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				piTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				piTitle.Size = UDim2.new(0, 253, 0, 28)
 				piTitle.Font = Enum.Font.Code
-				piTitle.Text = " " .. BoxTitle
+				piTitle.Text = BoxTitle
 				piTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				piTitle.TextSize = 15.000
 				piTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -897,7 +919,9 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				end)
 			end
 		end
+
 		_G.componentamount = _G.buttoncount + _G.slidercount + _G.keybindcount + _G.boxcount + _G.togglecount + _G.dropdowncount + _G.cutoffcount + _G.labelcount + _G.sectioncount
+
 		return ComponentHandler
 	end	
 	return TabHandler
