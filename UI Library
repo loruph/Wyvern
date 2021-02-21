@@ -723,7 +723,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				valTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				valTitle.Size = UDim2.new(0, 298, 0, 28)
 				valTitle.Font = Enum.Font.Code
-				valTitle.Text = " " .. BoxTitle
+				valTitle.Text = BoxTitle
 				valTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				valTitle.TextSize = 15.000
 				valTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -800,7 +800,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				userTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				userTitle.Size = UDim2.new(0, 217, 0, 28)
 				userTitle.Font = Enum.Font.Code
-				userTitle.Text = " " .. BoxTitle
+				userTitle.Text = BoxTitle
 				userTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				userTitle.TextSize = 15.000
 				userTitle.TextXAlignment = Enum.TextXAlignment.Left
@@ -878,7 +878,7 @@ function Library:CreateWindow(UITitle,UIGameTitle,DragSpeed)
 				piTitle.Position = UDim2.new(0.024324324, 0, -0.0185185187, 0)
 				piTitle.Size = UDim2.new(0, 253, 0, 28)
 				piTitle.Font = Enum.Font.Code
-				piTitle.Text = " " .. BoxTitle
+				piTitle.Text = BoxTitle
 				piTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				piTitle.TextSize = 15.000
 				piTitle.TextXAlignment = Enum.TextXAlignment.Left
